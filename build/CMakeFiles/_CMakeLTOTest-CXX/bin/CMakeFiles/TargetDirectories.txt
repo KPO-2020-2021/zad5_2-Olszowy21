@@ -1,0 +1,4 @@
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir

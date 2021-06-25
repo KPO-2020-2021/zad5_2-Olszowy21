@@ -7,170 +7,191 @@
 #endif
 
 #include <iostream>
-#include <iomanip>
 #include <stdlib.h>
-#include <fstream>
-#include <string>
-
+#include "lacze_do_gnuplota.hh"
 #include "exampleConfig.h"
-#include "example.h"
-#include "vector.hh"
-#include "matrix.hh"
-#include "../inc/lacze_do_gnuplota.hh"
+#include <fstream>
+#include "scene.hpp"
+#include "matrix3d.hpp"
+#include "vector3d.hpp"
 
-/*!
+
+/*
  * Simple main program that demontrates how access
  * CMake definitions (here the version number) from source code.
- * 
- * EDIT: dodane kreowanie wektorow i macierzy plus obsluga lacza do gnuplota
  */
-
-#define DL_KROTKI_BOK  100
-#define DL_DLUGI_BOK   150
-
-/*!
- * Przyklad zapisu wspolrzednych zbioru punktow do strumienia wyjściowego.
- * Dane sa odpowiednio sformatowane, tzn. przyjęto notację stałoprzecinkową
- * z dokładnością do 10 miejsca po przecinku. Szerokość wyświetlanego pola 
- * to 16 miejsc, sposób wyrównywania - do prawej strony.
- * \param[in] StrmWy - strumien wyjsciowy, do ktorego maja zostac zapisane
- *                     kolejne wspolrzedne.
- * \param[in] Przesuniecie - ten parameter jest tylko po to, aby pokazać
- *                          mozliwosc zmiany wspolrzednych i prostokata
- *                          i zmiane jego polorzenia na okienku graficznym
- *                         rysownym przez gnuplota.
- * \retval true - gdy operacja zapisu powiodła się,
- * \retval false - w przypadku przeciwnym.
- */
-void PrzykladZapisuWspolrzednychDoStrumienia( std::ostream&     StrmWy, 
-                                              double       Przesuniecie
-                                            )
-{
-   //---------------------------------------------------------------
-   // To tylko przyklad !!!
-   // W programie nalezy uzywać pojęcia wektora, a nie oddzielnych 
-   // zmiennych do reprezentowania wspolrzednych!
-   //
-  double  x1, y1, x2, y2, x3, y3, x4, y4; 
-
-  x1 = y1 = 10;
-  x2 = x1 + DL_DLUGI_BOK;  y2 = y1;
-  x3 = x2;  y3 = y2 + DL_KROTKI_BOK;
-  x4 = x3 - DL_DLUGI_BOK; y4 = y3;
-
-
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x1+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y1+Przesuniecie << std::endl;
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x2+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y2+Przesuniecie << std::endl;
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x3+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y3+Przesuniecie << std::endl;
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x4+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y4+Przesuniecie << std::endl;
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x1+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y1+Przesuniecie << std::endl; 
-                             // Jeszcze raz zapisujemy pierwszy punkt,
-                             // aby gnuplot narysowal zamkniętą linię.
-}
-
-
-
-/*!
- * Przyklad zapisu wspolrzednych zbioru punktow do pliku, z ktorego
- * dane odczyta program gnuplot i narysuje je w swoim oknie graficznym.
- * \param[in] sNazwaPliku - nazwa pliku, do którego zostana zapisane
- *                          wspolrzędne punktów.
- * \param[in] Przesuniecie - ten parameter jest tylko po to, aby pokazać
- *                          mozliwosc zmiany wspolrzednych i prostokata
- *                          i zmiane jego polorzenia na okienku graficznym
- *                         rysownym przez gnuplota.
- * \retval true - gdy operacja zapisu powiodła się,
- * \retval false - w przypadku przeciwnym.
- */
-bool PrzykladZapisuWspolrzednychDoPliku( const char  *sNazwaPliku,
-                                         double       Przesuniecie
-                                       )
-{
-  std::ofstream  StrmPlikowy;
-
-  StrmPlikowy.open(sNazwaPliku);
-  if (!StrmPlikowy.is_open())  {
-    std::cerr << ":(  Operacja otwarcia do zapisu \"" << sNazwaPliku << "\"" << std::endl
-	 << ":(  nie powiodla sie." << std::endl;
-    return false;
-  }
-
-  PrzykladZapisuWspolrzednychDoStrumienia(StrmPlikowy, Przesuniecie);
-
-  StrmPlikowy.close();
-  return !StrmPlikowy.fail();
-}
-
 int main() {
-  std::cout << "Project Rotation 2D based on C++ Boiler Plate v"
-            << PROJECT_VERSION_MAJOR /*duże zmiany, najczęściej brak kompatybilności wstecz */
-            << "."
-            << PROJECT_VERSION_MINOR /* istotne zmiany */
-            << "."
-            << PROJECT_VERSION_PATCH /* naprawianie bugów */
-            << "."
-            << PROJECT_VERSION_TWEAK /* zmiany estetyczne itd. */
-            << std::endl;
-  // std::system("cat ../LICENSE");
-  // do zadania Rotacja 2D
-  std::cout << "Vector:" << std::endl;
-  Vector tmpV1 = Vector();
-  std::cout << "Vector - konstruktor bezparametryczny:\n" << tmpV1 << std::endl;
-  double argumentsV[] = {1.0, 2.0};
-  Vector tmpV2 = Vector(argumentsV);
-  std::cout << "Vector - konstruktor parametryczny:\n" << tmpV2 << std::endl;
+  std::cout << "C++ Boiler Plate v"
+          << PROJECT_VERSION_MAJOR
+          << "."
+          << PROJECT_VERSION_MINOR
+          << "."
+          << PROJECT_VERSION_PATCH
+          << "."
+          << PROJECT_VERSION_TWEAK // zartowalem
+          << std::endl;
+  //std::system("cat ../LICENSE");
 
-  std::cout << "Matrix:" << std::endl;
-  Matrix tmpM1 = Matrix();
-  std::cout << "Matrix - konstruktor bezparametryczny:\n" << tmpM1 << std::endl;
-  double argumentsM[][SIZE] = {{1.0, 2.0},{3.0, 4.0}};
-  Matrix tmpM2 = Matrix(argumentsM);
-  std::cout << "Matrix - konstruktor parametryczny:\n" << tmpM2 << std::endl;
 
-    PzG::LaczeDoGNUPlota  Lacze;  // Ta zmienna jest potrzebna do wizualizacji
-                                // rysunku prostokata
+  Drone *Wskaznik_na_drona;
+  std::ofstream FILE;
 
-   //-------------------------------------------------------
-   //  Wspolrzedne wierzcholkow beda zapisywane w pliku "prostokat.dat"
-   //  Ponizsze metody powoduja, ze dane z pliku beda wizualizowane
-   //  na dwa sposoby:
-   //   1. Rysowane jako linia ciagl o grubosci 2 piksele
-   //
-  Lacze.DodajNazwePliku("../datasets/prostokat.dat",PzG::RR_Ciagly,2);
-   //
-   //   2. Rysowane jako zbior punktow reprezentowanych przez kwadraty,
-   //      których połowa długości boku wynosi 2.
-   //
-  Lacze.DodajNazwePliku("../datasets/prostokat.dat",PzG::RR_Punktowy,2);
-   //
-   //  Ustawienie trybu rysowania 2D, tzn. rysowany zbiór punktów
-   //  znajduje się na wspólnej płaszczyźnie. Z tego powodu powoduj
-   //  jako wspolrzedne punktow podajemy tylko x,y.
-   //
-  Lacze.ZmienTrybRys(PzG::TR_2D);
+  std::string File_name_anime[6];                    // 0 dla korpusu od 1 do 4 dla rotorów oraz 5 dla pliku do rysowania ścieżki lotu
+  File_name_anime[0] = "../datasets/cuboid1.dat";
+  File_name_anime[1] = "../datasets/rotor1.dat";
+  File_name_anime[2] = "../datasets/rotor2.dat";
+  File_name_anime[3] = "../datasets/rotor3.dat";
+  File_name_anime[4] = "../datasets/rotor4.dat";
+  File_name_anime[5] = "../datasets/rozklad_lotu.dat";
 
-  PrzykladZapisuWspolrzednychDoStrumienia(std::cout,0);
-  if (!PrzykladZapisuWspolrzednychDoPliku("../datasets/prostokat.dat",0)) return 1;
-  Lacze.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
-  std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-  std::cin.ignore(100000,'\n');
-   //----------------------------------------------------------
-   // Ponownie wypisuje wspolrzedne i rysuje prostokąt w innym miejscu.
-   //
-  PrzykladZapisuWspolrzednychDoStrumienia(std::cout,50);
-  if (!PrzykladZapisuWspolrzednychDoPliku("../datasets/prostokat.dat",50)) return 1;
-  Lacze.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
-  std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-  std::cin.ignore(100000,'\n');
+  std::string File_name_anime1[6];
+  File_name_anime1[0] = "../datasets/cuboid11.dat";
+  File_name_anime1[1] = "../datasets/rotor11.dat";
+  File_name_anime1[2] = "../datasets/rotor21.dat";
+  File_name_anime1[3] = "../datasets/rotor31.dat";
+  File_name_anime1[4] = "../datasets/rotor41.dat";
+  File_name_anime1[5] = "../datasets/rozklad_lotu.dat";
 
-  // Z bazy projektu-wydmuszki Boiler Plate C++:
-  // Bring in the dummy class from the example source,
-  // just to show that it is accessible from main.cpp.
-  Dummy d = Dummy();
-  return d.doSomething() ? 0 : -1;
+  std::string Cuboid_oryginal;
+  std::string Prism_oryginal;
+  Cuboid_oryginal = "../datasets/cuboid_oryginal.dat";
+  Prism_oryginal = "../datasets/prism_oryginal.dat";
+  
+  Vector3D polozenie1(20, 20, 0);
+  Vector3D polozenie2(5, 5, 0);
+
+  Vector3D sciezka_lotu[4];
+
+  PzG::LaczeDoGNUPlota  Lacze;        // Ta zmienna jest potrzebna do wizualizacji
+                                      // rysunku drona
+
+  Drone dron1, dron2;
+  dron1.inicjalizuj_drona(File_name_anime, Cuboid_oryginal, Prism_oryginal, polozenie1, 0 , Lacze);
+  dron2.inicjalizuj_drona(File_name_anime1, Cuboid_oryginal, Prism_oryginal, polozenie2, 45 , Lacze);
+
+  Scene Scena;
+  Scena.Dodaj_drona(dron1);
+  Scena.Dodaj_drona(dron2);
+
+  Wskaznik_na_drona = Scena.use_avtive_drone();
+
+  Lacze.DodajNazwePliku("../datasets/scene.dat");
+  Lacze.ZmienTrybRys(PzG::TR_3D);
+
+  Lacze.Inicjalizuj();
+
+  Lacze.UstawZakresX(-100, 100);
+  Lacze.UstawZakresY(-100, 100);
+  Lacze.UstawZakresZ(0, 100);
+
+  Lacze.Rysuj();
+
+  std::cout<<"\n\t**********************MENU***********************"<<std::endl;
+  std::cout<<"\ta - Wybierz aktywnego drona"<<std::endl;
+  std::cout<<"\tp - zadaj parametry przelotu"<<std::endl;
+  std::cout<<"\tm - wyswietl menu"<<std::endl<<std::endl;
+
+  std::cout<<"\tk - koniec dzialania programu"<<std::endl;
+
+  char x;
+
+  while(x != 'k'){
+      double kat;
+      double odleglosc;
+
+      std::cout<<"\nPolozenie aktywnego drona " << (*Wskaznik_na_drona).Get_polozeniex() << " " << (*Wskaznik_na_drona).Get_polozeniey() << std::endl << std::endl;
+
+      std::cout<<"\tAktualna ilosc obiektow Wektor3D:"<< Vector3D::zwroc_aktywna_ilosc_wektorow() << std::endl;
+      std::cout<<"\t  laczna ilosc obiektow Wektor3D:"<< Vector3D::zwroc_ogolna_ilosc_wektorow() <<  std::endl <<  std::endl;
+
+      std::cout<<"Wybieram : ( m - menu ) > ";
+      std::cin>>x;
+      switch (x){
+      case 'm':
+            std::cout<<"\n\t**********************MENU***********************"<<std::endl;
+            std::cout<<"\ta - Wybierz aktywnego drona"<<std::endl;
+            std::cout<<"\tp - zadaj parametry przelotu"<<std::endl;
+            std::cout<<"\tm - wyswietl menu"<<std::endl<<std::endl;
+
+            std::cout<<"\tk - koniec dzialania programu"<<std::endl;
+
+            std::cin.ignore(10000, '\n');
+            break;
+      case 'a':
+
+            std::cout<<"\tWybór aktywnego drona "<<std::endl;
+
+            std::cout<<"\t1 - Polozenie (x,y): " << dron1.Get_polozeniex() << " " << dron1.Get_polozeniey();
+            if( Scena.index_aktywnego_drona() == 0){
+
+              std::cout << " <---- aktywny dron";
+
+            }
+            std::cout << std::endl;
+
+            std::cout<<"\t2 - Polozenie (x,y): " << dron2.Get_polozeniex() << " " << dron2.Get_polozeniey();
+            if( Scena.index_aktywnego_drona() == 1){
+
+              std::cout << " <---- aktywny dron";
+
+            }
+            std::cout << std::endl;
+
+            std::cout << std::endl << "Wprowadź numer aktywnego drona ---> ";
+            int index;
+            std::cin >> index;
+
+            if(index > 0 && index < 3){
+              Scena.avtive_drone(index);
+              Wskaznik_na_drona = Scena.use_avtive_drone();
+            }
+            else{
+              std::cout << std::endl << "Wprowadzano zły numer proszę podać poprawny";
+              std::cin >> index;
+              if(index > 0 && index < 3){
+                Scena.avtive_drone(index);
+                Wskaznik_na_drona = Scena.use_avtive_drone();
+              }
+              else{
+                std::cout << std::endl << "";
+              }
+            }
+
+            break;
+      case 'p':
+            std::cout << "Podaj kierunek lotu (kat w stopniach) > ";
+            std::cin >> kat;
+            std::cout  << "Podaj długość lotu > ";
+            std::cin >> odleglosc;
+            std::cout << "Rysuje zaplanowana sciezke lotu ..." << std::endl;
+            (*Wskaznik_na_drona).Maluj_rozklad_lotu(sciezka_lotu, File_name_anime, kat, odleglosc, Lacze);
+
+            std::cout << "Realizacja przelotu ..." << std::endl;
+
+            if((*Wskaznik_na_drona).up_down(50, Lacze)){
+
+              (*Wskaznik_na_drona).forward_backward(kat, odleglosc, Lacze);
+
+              if((*Wskaznik_na_drona).up_down(-50, Lacze)){
+
+                std::cout << "Dron wyladował ..." << std::endl << std::endl;
+
+              }
+
+              FILE.open(File_name_anime[5].c_str() , std::ios::trunc );
+              FILE.close();
+              
+            }
+
+            break;
+      case 'k':
+            std::cout<<" Dziękuję za używanie mojego programu ;)"<<std::endl;
+
+            break;
+      default:
+            std::cout<<" Niepoprawna operacja, symbol m to MENU"<<std::endl;
+
+            break;
+      }
+  }
 }

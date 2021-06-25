@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/main.dir/app/main.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/app/main.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/app/main.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/lacze_do_gnuplota.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/lacze_do_gnuplota.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/block.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/block.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/block.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/vector3d.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/vector3d.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/vector3d.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/matrix3d.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/matrix3d.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/matrix3d.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/cuboid.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/cuboid.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/cuboid.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/prism.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/prism.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/prism.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/drone.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/drone.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/drone.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/scene.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/main.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/tests/main.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/tests/main.cpp"
+}
+]
