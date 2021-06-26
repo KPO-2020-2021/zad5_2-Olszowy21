@@ -10,6 +10,14 @@
 matrix3d.hpp
 ../inc/matrix3d.hpp
 
+../inc/cuboid.hpp
+prism.hpp
+../inc/prism.hpp
+
+../inc/drone.hpp
+cuboid.hpp
+../inc/cuboid.hpp
+
 ../inc/lacze_do_gnuplota.hh
 string
 -
@@ -27,6 +35,14 @@ matrix.hpp
 ../inc/matrix.hpp
 vector3d.hpp
 ../inc/vector3d.hpp
+
+../inc/prism.hpp
+block.hpp
+../inc/block.hpp
+
+../inc/scene.hpp
+drone.hpp
+../inc/drone.hpp
 
 ../inc/size.hpp
 
@@ -60,7 +76,11 @@ lacze_do_gnuplota.hh
 vector.hpp
 ../inc/vector.hpp
 
-/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/block.cpp
-block.hpp
-/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/block.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/drone.cpp
+drone.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/drone.hpp
+
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.cpp
+scene.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.hpp
 

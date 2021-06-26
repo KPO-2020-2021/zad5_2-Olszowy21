@@ -166,6 +166,7 @@ void Drone::Maluj_rozklad_lotu(Vector3D sciezka_lotu[], std::string nazwa_pliku[
     sciezka_lotu[1] = Polozenie + wysokosc;
     sciezka_lotu[2] = Polozenie + wysokosc + kierunek;
     sciezka_lotu[3] = Polozenie + kierunek;
+
     
     std::ofstream File_lot;
     File_lot.open(nazwa_pliku[5].c_str() , std::ios::trunc );
@@ -183,7 +184,55 @@ void Drone::Maluj_rozklad_lotu(Vector3D sciezka_lotu[], std::string nazwa_pliku[
         throw std::runtime_error("Plik nie istnieje / błąd pliku");
     }
 
+}
 
+bool Drone::Zwiad(Vector3D sciezka_lotu_po_okregu[], std::string nazwa_pliku[], double radius, PzG::LaczeDoGNUPlota  &Lacze){
+
+    Vector3D wysokosc(0, 0, 50);
+
+    double dlugosc_lotu1 = radius;
+    double dlugosc_lotu2 = radius * sqrt(3);
+    double dlugosc_lotu3 = 2 * radius;
+
+    double kaciwo1 = (-60 + kat_do_globalnego) * M_PI / 180;
+    double kaciwo2 = (-30 + kat_do_globalnego) * M_PI / 180;
+    double kaciwo3 = (0 + kat_do_globalnego) * M_PI / 180;
+    double kaciwo4 = (30 + kat_do_globalnego) * M_PI / 180;
+    double kaciwo5 = (60 + kat_do_globalnego) * M_PI / 180;
+
+    Vector3D kierunek1(cos(kaciwo1) * dlugosc_lotu1, sin(kaciwo1) * dlugosc_lotu1, 0);
+    Vector3D kierunek2(cos(kaciwo2) * dlugosc_lotu2, sin(kaciwo2) * dlugosc_lotu2, 0);
+    Vector3D kierunek3(cos(kaciwo3) * dlugosc_lotu3, sin(kaciwo3) * dlugosc_lotu3, 0);
+    Vector3D kierunek4(cos(kaciwo4) * dlugosc_lotu2, sin(kaciwo4) * dlugosc_lotu2, 0);
+    Vector3D kierunek5(cos(kaciwo5) * dlugosc_lotu1, sin(kaciwo5) * dlugosc_lotu1, 0);
+
+    sciezka_lotu_po_okregu[0] = Polozenie;
+    sciezka_lotu_po_okregu[1] = Polozenie + wysokosc;
+    sciezka_lotu_po_okregu[2] = Polozenie + wysokosc + kierunek1;
+    sciezka_lotu_po_okregu[3] = Polozenie + wysokosc + kierunek2;
+    sciezka_lotu_po_okregu[4] = Polozenie + wysokosc + kierunek3;
+    sciezka_lotu_po_okregu[5] = Polozenie + wysokosc + kierunek4;
+    sciezka_lotu_po_okregu[6] = Polozenie + wysokosc + kierunek5;
+    sciezka_lotu_po_okregu[7] = Polozenie + wysokosc;
+
+    std::ofstream File_lot;
+    File_lot.open(nazwa_pliku[5].c_str() , std::ios::trunc );
+    Lacze.DodajNazwePliku(nazwa_pliku[5].c_str());
+
+    if(File_lot.is_open()){
+        for(int i =0; i < 8; ++i){
+            File_lot << sciezka_lotu_po_okregu[i] << std::endl;
+            usleep(1000000);
+            Lacze.Rysuj();
+        }
+
+        File_lot.close();
+    }
+    else{
+        throw std::runtime_error("Plik nie istnieje / błąd pliku");
+    }
+    
+    return true;
 }
 
 

@@ -61,6 +61,7 @@ int main() {
   Vector3D polozenie2(5, 5, 0);
 
   Vector3D sciezka_lotu[4];
+  Vector3D sciezka_lotu_po_okregu[8];
 
   PzG::LaczeDoGNUPlota  Lacze;        // Ta zmienna jest potrzebna do wizualizacji
                                       // rysunku drona
@@ -98,6 +99,7 @@ int main() {
   while(x != 'k'){
       double kat;
       double odleglosc;
+      double promien;
 
       std::cout<<"\nPolozenie aktywnego drona " << (*Wskaznik_na_drona).Get_polozeniex() << " " << (*Wskaznik_na_drona).Get_polozeniey() << std::endl << std::endl;
 
@@ -171,6 +173,44 @@ int main() {
             if((*Wskaznik_na_drona).up_down(50, Lacze)){
 
               (*Wskaznik_na_drona).forward_backward(kat, odleglosc, Lacze);
+
+              if((*Wskaznik_na_drona).up_down(-50, Lacze)){
+
+                std::cout << "Dron wyladował ..." << std::endl << std::endl;
+
+              }
+
+              FILE.open(File_name_anime[5].c_str() , std::ios::trunc );
+              FILE.close();
+              
+            }
+
+            break;
+      case 'o':
+
+            std::cout << "Wykona się zwiad po zadanym promieniu > ";
+            std::cin >> promien;
+            std::cout << "Rysuje zaplanowana sciezke lotu ..." << std::endl;
+
+            (*Wskaznik_na_drona).Zwiad(sciezka_lotu_po_okregu, File_name_anime, promien, Lacze);
+
+            std::cout << "Realizacja przelotu ..." << std::endl;
+
+            if((*Wskaznik_na_drona).up_down(50, Lacze)){
+
+              //double kat_do_edycji = (*Wskaznik_na_drona).Get_kat_do_globalnego();
+              double kaciwo1 = -60;
+              (*Wskaznik_na_drona).forward_backward(kaciwo1, promien, Lacze);
+
+              for(int i = 0; i < 5; ++i ){
+                //kat_do_edycji = (*Wskaznik_na_drona).Get_kat_do_globalnego();
+                kaciwo1 = 60;
+                (*Wskaznik_na_drona).forward_backward(kaciwo1, promien, Lacze);
+              }
+
+              //kat_do_edycji = (*Wskaznik_na_drona).Get_kat_do_globalnego();
+              kaciwo1 = 120;
+              (*Wskaznik_na_drona).forward_backward(kaciwo1, 0, Lacze);
 
               if((*Wskaznik_na_drona).up_down(-50, Lacze)){
 
