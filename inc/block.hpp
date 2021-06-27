@@ -37,13 +37,15 @@ public:
     void set_filename_anime(std::string Filename_anime) { Plik_BrylaAnimowana = Filename_anime;};
 
     const std::string get_filename_anime() const {return Plik_BrylaAnimowana ;};
+
+    double get_pozycje_x() {return Polozenie[0];};
+
+    double get_pozycje_y() {return Polozenie[1];};
     
     bool Otworz_Plik_animowany(std::ofstream &out) const;
 
     void Zamknij_Plik_animowany(std::ofstream &out) const;
 
     void set_kat(double kat) { kat_do_globalnego = kat;};
-
-    virtual void Inicjuj_obiekt(Vector3D &tmp);
 
 };

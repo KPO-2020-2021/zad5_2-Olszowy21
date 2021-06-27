@@ -6,19 +6,23 @@
 
 #IncludeRegexTransform: 
 
-../inc/block.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/block.hpp
 matrix3d.hpp
-../inc/matrix3d.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix3d.hpp
 
-../inc/cuboid.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/cuboid.hpp
 prism.hpp
-../inc/prism.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/prism.hpp
 
-../inc/drone.hpp
-cuboid.hpp
-../inc/cuboid.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_z_grania.hpp
+obiekt_sceny.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
 
-../inc/lacze_do_gnuplota.hh
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_ze_szczytem.hpp
+obiekt_sceny.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/lacze_do_gnuplota.hh
 string
 -
 list
@@ -26,27 +30,31 @@ list
 vector
 -
 
-../inc/matrix.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix.hpp
 vector.hpp
-../inc/vector.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector.hpp
 
-../inc/matrix3d.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix3d.hpp
 matrix.hpp
-../inc/matrix.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix.hpp
 vector3d.hpp
-../inc/vector3d.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector3d.hpp
 
-../inc/prism.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+cuboid.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/cuboid.hpp
+
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/plaskowyz.hpp
+obiekt_sceny.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/prism.hpp
 block.hpp
-../inc/block.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/block.hpp
 
-../inc/scene.hpp
-drone.hpp
-../inc/drone.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/size.hpp
 
-../inc/size.hpp
-
-../inc/vector.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector.hpp
 iomanip
 -
 fstream
@@ -56,7 +64,7 @@ iostream
 cmath
 -
 size.hpp
-../inc/size.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/size.hpp
 list
 -
 memory
@@ -65,22 +73,28 @@ unistd.h
 -
 math.h
 -
-string
--
 sstream
 -
+stdio.h
+-
+string
+-
 lacze_do_gnuplota.hh
-../inc/lacze_do_gnuplota.hh
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/lacze_do_gnuplota.hh
 
-../inc/vector3d.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector3d.hpp
 vector.hpp
-../inc/vector.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector.hpp
 
-/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/drone.cpp
-drone.hpp
-/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/drone.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_z_grania.cpp
+../inc/gora_z_grania.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_z_grania.hpp
 
-/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.cpp
-scene.hpp
-/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_ze_szczytem.cpp
+../inc/gora_ze_szczytem.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_ze_szczytem.hpp
+
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/plaskowyz.cpp
+../inc/plaskowyz.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/plaskowyz.hpp
 

@@ -1,4 +1,4 @@
-#include "gora_z_grania.hpp"
+#include "../inc/gora_z_grania.hpp"
 
 
 /*!
@@ -7,11 +7,13 @@
  * 
  * 
  */
-Mount2::Mount2(std::string Filename_oryginal, Vector3D skala, Vector3D polozenie){
+Mount2::Mount2(std::string Filename_oryginal, std::string File_name_anime, Vector3D &skala, Vector3D &polozenie){
 
     kat_do_globalnego = 0;
 
-    inicjuj_Mount2( Filename_oryginal, skala, Polozenie);
+    set_filename_anime(File_name_anime);
+
+    inicjuj_Mount2( Filename_oryginal, skala, polozenie);
 
 }
 
@@ -36,13 +38,13 @@ const Vector<double, SIZE>& Mount2::operator [] (unsigned int index) const{
 }
 
 
-void Mount2::inicjuj_Mount2(std::string Filename_oryginal , Vector3D &skala, Vector3D &Polozenie ){
+void Mount2::inicjuj_Mount2(std::string Filename_oryginal , Vector3D &skala, Vector3D &polozenie ){
     
     Vector3D broker;
 
     std::ifstream oryginal;
 
-    this->Polozenie = Polozenie;
+    Polozenie = polozenie;
 
     set_skala(skala);
 
@@ -71,4 +73,58 @@ void Mount2::inicjuj_Mount2(std::string Filename_oryginal , Vector3D &skala, Vec
 
     oryginal.close();
 
+}
+
+
+void Mount2::ze_wzora_do_animatora(){
+    
+    Vector3D broker;
+
+    std::ofstream anime;
+    int Licznik = 1;
+    
+    if(Otworz_Plik_animowany(anime)){
+        
+        for(int i = 0; i < 4; ++i){
+            broker = top[0];
+            broker = Skrobanie_do_rodzica(broker);
+            anime << broker;
+            anime << std::endl;
+            for(int j = 1; j < 3; ++j){
+                broker = top[Licznik];
+                broker = Skrobanie_do_rodzica(broker);
+                anime << broker;
+                anime << std::endl;
+                ++Licznik;
+            }
+            broker = top[9];
+            broker = Skrobanie_do_rodzica(broker);
+            anime << broker;
+            anime << std::endl;
+            anime << std::endl;
+        }
+        broker = top[0];
+        broker = Skrobanie_do_rodzica(broker);
+        anime << broker;
+        anime << std::endl;
+        broker = top[1];
+        broker = Skrobanie_do_rodzica(broker);
+        anime << broker;
+        anime << std::endl;
+        broker = top[2];
+        broker = Skrobanie_do_rodzica(broker);
+        anime << broker;
+        anime << std::endl;
+        broker = top[9];
+        broker = Skrobanie_do_rodzica(broker);
+        anime << broker;
+        anime << std::endl;
+        anime << std::endl;
+
+        Zamknij_Plik_animowany(anime);
+
+    }
+    else{
+        throw std::runtime_error("PLik nie istnieje / błąd pliku1");
+    }
 }

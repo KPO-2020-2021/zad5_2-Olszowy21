@@ -28,11 +28,38 @@ CMakeFiles/program.dir/src/drone.cpp.o
  ../inc/lacze_do_gnuplota.hh
  ../inc/matrix.hpp
  ../inc/matrix3d.hpp
+ ../inc/obiekt_sceny.hpp
  ../inc/prism.hpp
  ../inc/size.hpp
  ../inc/vector.hpp
  ../inc/vector3d.hpp
  /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/drone.cpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/block.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/cuboid.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_z_grania.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/lacze_do_gnuplota.hh
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/prism.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/size.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_z_grania.cpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/block.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/cuboid.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_ze_szczytem.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/lacze_do_gnuplota.hh
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/prism.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/size.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_ze_szczytem.cpp
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
  ../inc/lacze_do_gnuplota.hh
  /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/lacze_do_gnuplota.cpp
@@ -44,6 +71,35 @@ CMakeFiles/program.dir/src/matrix3d.cpp.o
  ../inc/vector.hpp
  ../inc/vector3d.hpp
  /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/matrix3d.cpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/block.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/cuboid.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/drone.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_z_grania.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_ze_szczytem.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/lacze_do_gnuplota.hh
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/plaskowyz.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/prism.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/size.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/obiekt_sceny.cpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/block.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/cuboid.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/lacze_do_gnuplota.hh
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/plaskowyz.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/prism.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/size.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/plaskowyz.cpp
 CMakeFiles/program.dir/src/prism.cpp.o
  ../inc/block.hpp
  ../inc/lacze_do_gnuplota.hh
@@ -55,17 +111,21 @@ CMakeFiles/program.dir/src/prism.cpp.o
  ../inc/vector3d.hpp
  /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/prism.cpp
 CMakeFiles/program.dir/src/scene.cpp.o
- ../inc/block.hpp
- ../inc/cuboid.hpp
- ../inc/drone.hpp
- ../inc/lacze_do_gnuplota.hh
- ../inc/matrix.hpp
- ../inc/matrix3d.hpp
- ../inc/prism.hpp
- ../inc/scene.hpp
- ../inc/size.hpp
- ../inc/vector.hpp
- ../inc/vector3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/block.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/cuboid.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/drone.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_z_grania.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/gora_ze_szczytem.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/lacze_do_gnuplota.hh
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/matrix3d.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/plaskowyz.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/prism.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/scene.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/size.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector.hpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/vector3d.hpp
  /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.cpp
 CMakeFiles/program.dir/src/vector3d.cpp.o
  ../inc/lacze_do_gnuplota.hh

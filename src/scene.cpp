@@ -1,9 +1,23 @@
-#include "scene.hpp"
+
+#include "../inc/scene.hpp"
+#include "../inc/plaskowyz.hpp"
+#include "../inc/gora_ze_szczytem.hpp"
+#include "../inc/gora_z_grania.hpp"
 
 
 Scene::Scene(){
 
   Numer_aktywnego_drona = 0;
+    
+}
+
+Scene::~Scene(){
+
+  for(std::list<objects_scene>::iterator iter = get_liste().begin(); iter != get_liste().end(); ++iter){
+    if(iter->zwroc_typ_obiektu() != "Dron"){
+      remove(iter->get_filename_anime().c_str());
+    }
+  }
     
 }
 
@@ -16,27 +30,27 @@ void Scene::Dodaj_drona(Drone droniszcze){
 
 }
 
-void Scene::Dodaj_obstrukcje( Vector3D &skala, Vector3D &polozenie, int index, PzG::LaczeDoGNUPlota &Lacze){
+void Scene::Dodaj_obstrukcje(std::string File_oryginal, Vector3D &skala, Vector3D &polozenie, int index, PzG::LaczeDoGNUPlota &Lacze){
     
-  std::string file_name = "obiekt" + std::to_string(Pudlo_z_obstrukcjami.size() - Pudlo_z_dronami.size()) + ".dat";
-
-  
+  std::string file_name = "../datasets/obiekt" + std::to_string(Pudlo_z_obstrukcjami.size() - Pudlo_z_dronami.size()) + ".dat";
+  std::cout << file_name << std::endl;
+  usleep(100000);
   objects_scene obstrukt;
   
   switch(index){
 
   case 1:
-    obstrukt = Mount1(file_name, skala, polozenie);
+    obstrukt = Mount1(File_oryginal, File_name_anime, skala, polozenie);
 
     break;
 
   case 2:
-    obstrukt = Mount2(file_name, skala , polozenie);
+    obstrukt = Mount2(File_oryginal, File_name_anime, skala , polozenie);
   
     break;
 
   case 3:
-    obstrukt = Mount3(file_name, skala , polozenie);
+    obstrukt = Mount3(File_oryginal, File_name_anime, skala , polozenie);
   
     break;
 
@@ -45,7 +59,7 @@ void Scene::Dodaj_obstrukcje( Vector3D &skala, Vector3D &polozenie, int index, P
   }
 
   Pudlo_z_obstrukcjami.push_back(obstrukt);
-    
+  Lacze.Rysuj();
 }
 
 void Scene::Usun_obstrukt(int index, PzG::LaczeDoGNUPlota &Lacze){
@@ -59,6 +73,7 @@ void Scene::Usun_obstrukt(int index, PzG::LaczeDoGNUPlota &Lacze){
   FILE.close();
 
   Pudlo_z_obstrukcjami.erase(it);
+  Lacze.Rysuj();
 
 }
 

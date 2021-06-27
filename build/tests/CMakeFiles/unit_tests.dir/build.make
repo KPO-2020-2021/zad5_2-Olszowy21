@@ -83,7 +83,11 @@ unit_tests_EXTERNAL_OBJECTS = \
 "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/cuboid.cpp.o" \
 "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/prism.cpp.o" \
 "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/drone.cpp.o" \
-"/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/scene.cpp.o"
+"/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/scene.cpp.o" \
+"/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o" \
+"/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/obiekt_sceny.cpp.o" \
+"/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/gora_z_grania.cpp.o" \
+"/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles/program.dir/src/plaskowyz.cpp.o"
 
 unit_tests: tests/CMakeFiles/unit_tests.dir/main.cpp.o
 unit_tests: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
@@ -94,6 +98,10 @@ unit_tests: CMakeFiles/program.dir/src/cuboid.cpp.o
 unit_tests: CMakeFiles/program.dir/src/prism.cpp.o
 unit_tests: CMakeFiles/program.dir/src/drone.cpp.o
 unit_tests: CMakeFiles/program.dir/src/scene.cpp.o
+unit_tests: CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o
+unit_tests: CMakeFiles/program.dir/src/obiekt_sceny.cpp.o
+unit_tests: CMakeFiles/program.dir/src/gora_z_grania.cpp.o
+unit_tests: CMakeFiles/program.dir/src/plaskowyz.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/build.make
 unit_tests: tests/CMakeFiles/unit_tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../unit_tests"

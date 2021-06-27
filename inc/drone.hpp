@@ -40,6 +40,8 @@ public:
 
     Vector3D Trans_do_rodzica(const Vector3D & top) const;
 
+    virtual std::string zwroc_typ_obiektu() {return "Dron";};
+
     bool up_down(double wysokosc_lotu, PzG::LaczeDoGNUPlota &Lacze);
 
     void forward_backward(double kat_obrotu, double dlugosc_lotu, PzG::LaczeDoGNUPlota &Lacze);

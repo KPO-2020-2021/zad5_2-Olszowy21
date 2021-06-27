@@ -46,6 +46,11 @@ set(SOURCES          # All .cpp files in src/
     src/prism.cpp
     src/drone.cpp
     src/scene.cpp
+    src/gora_ze_szczytem.cpp
+    src/obiekt_sceny.cpp
+    src/gora_z_grania.cpp
+    src/plaskowyz.cpp
+
 )
 set(TESTFILES        # All .cpp files in tests/
     tests/main.cpp

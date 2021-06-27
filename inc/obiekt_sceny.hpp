@@ -8,16 +8,14 @@
 */
 
 #include "cuboid.hpp"
-#include "plaskowyz.hpp"
-#include "gora_z_grania.hpp"
-#include "gora_ze_szczytem.hpp"
 
 
-class objects_scene: public Block {
+class objects_scene: public Cuboid {
 
   public:
 
-    virtual void Inicjuj_obiekt(Vector3D &tmp) override;
+  virtual std::string zwroc_typ_obiektu() {return "cuś";};
 
-  
+  void ze_wzora_do_animatora();
+
 };

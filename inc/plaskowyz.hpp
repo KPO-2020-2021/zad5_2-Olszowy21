@@ -3,8 +3,7 @@
 #include "obiekt_sceny.hpp"
 
 
-
-class Mount3: public objects_scene{ // Plaskowyz
+class Mount3: public objects_scene { // Plaskowyz
 protected:
 
     // std::string Plik_BrylaAnimowana;
@@ -24,14 +23,16 @@ public:
 
 // Konstruktory 
 
-    Mount3(std::string Filename_oryginal, Vector3D skala, Vector3D polozenie);
+    Mount3(std::string Filename_oryginal, std::string File_name_anime, Vector3D &skala, Vector3D &polozenie);
     
     
 // Metody
 
-    void inicjuj_Mount3(std::string Filename_oryginal, Vector3D &skala, Vector3D &Polozenie );
+    void inicjuj_Mount3(std::string Filename_oryginal, Vector3D &skala, Vector3D &polozenie );
 
-    virtual void Inicjuj_obiekt(Vector3D &tmp) override;
+    virtual std::string zwroc_typ_obiektu() {return "Plaskowyz";};
+
+    void ze_wzora_do_animatora();
 
     const Vector<double, SIZE> &operator [] (unsigned int index) const;
 

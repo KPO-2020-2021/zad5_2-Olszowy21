@@ -17,6 +17,8 @@ prism.hpp
 ../inc/drone.hpp
 cuboid.hpp
 ../inc/cuboid.hpp
+obiekt_sceny.hpp
+../inc/obiekt_sceny.hpp
 
 ../inc/lacze_do_gnuplota.hh
 string
@@ -35,6 +37,10 @@ matrix.hpp
 ../inc/matrix.hpp
 vector3d.hpp
 ../inc/vector3d.hpp
+
+../inc/obiekt_sceny.hpp
+cuboid.hpp
+../inc/cuboid.hpp
 
 ../inc/prism.hpp
 block.hpp
@@ -65,9 +71,11 @@ unistd.h
 -
 math.h
 -
-string
--
 sstream
+-
+stdio.h
+-
+string
 -
 lacze_do_gnuplota.hh
 ../inc/lacze_do_gnuplota.hh
@@ -91,10 +99,18 @@ fstream
 -
 scene.hpp
 /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/app/scene.hpp
+drone.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/app/drone.hpp
 matrix3d.hpp
 /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/app/matrix3d.hpp
 vector3d.hpp
 /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/app/vector3d.hpp
+../inc/obiekt_sceny.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
+cuboid.hpp
+/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/cuboid.hpp
 
 /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/tests/doctest/doctest.h
 signal.h

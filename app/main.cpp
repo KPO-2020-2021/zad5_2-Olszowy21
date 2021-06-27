@@ -12,13 +12,10 @@
 #include "exampleConfig.h"
 #include <fstream>
 #include "scene.hpp"
+#include "drone.hpp"
 #include "matrix3d.hpp"
 #include "vector3d.hpp"
-
-void dodaj_przeszkode(){
-    std::string File_name_obstructions;
-    std::cout << std::endl << "Wprowadź nazwę pliku ";
-}
+#include "../inc/obiekt_sceny.hpp"
 
 /*
  * Simple main program that demontrates how access
@@ -39,14 +36,6 @@ int main() {
 
   Drone *Wskaznik_na_drona;
   std::ofstream FILE;
-
-  std::string File_name_obstructions[6];
-  File_name_obstructions[0] = "../datasets/ostroslup.dat";
-  File_name_obstructions[1] = "../datasets/gran.dat";
-  File_name_obstructions[2] = "../datasets/plaskowyz.dat";
-  File_name_obstructions[3] = "../datasets/rotor31.dat";
-  File_name_obstructions[4] = "../datasets/rotor41.dat";
-  File_name_obstructions[5] = "../datasets/rozklad_lotu.dat";
 
   std::string File_name_anime[6];                    // 0 dla korpusu od 1 do 4 dla rotorów oraz 5 dla pliku do rysowania ścieżki lotu
   File_name_anime[0] = "../datasets/cuboid1.dat";
@@ -78,6 +67,10 @@ int main() {
   
   Vector3D polozenie1(20, 20, 0);
   Vector3D polozenie2(5, 5, 0);
+  Vector3D polozenie3(30, 35, 0);
+  Vector3D polozenie4(60, 60, 0);
+  Vector3D polozenie5(40, 10, 0);
+
 
   Vector3D sciezka_lotu[4];
   Vector3D sciezka_lotu_po_okregu[8];
@@ -93,16 +86,25 @@ int main() {
   Scena.Dodaj_drona(dron1);
   Scena.Dodaj_drona(dron2);
 
+  Vector3D skala1(10, 10, 0);
+  Vector3D skala2(5, 20, 0);
+  Vector3D skala3(15, 2, 0);
+
+  Scena.Dodaj_obstrukcje(Ostroslup_oryginal, skala1, polozenie3, 1, Lacze);
+  Scena.Dodaj_obstrukcje(Gran_oryginal, polozenie4, 2, Lacze);
+  Scena.Dodaj_obstrukcje(Plaskowyz_oryginal, polozenie5, 3, Lacze);
+
   Wskaznik_na_drona = Scena.use_avtive_drone();
 
   Lacze.DodajNazwePliku("../datasets/scene.dat");
+
   Lacze.ZmienTrybRys(PzG::TR_3D);
 
   Lacze.Inicjalizuj();
 
-  Lacze.UstawZakresX(0, 100);
-  Lacze.UstawZakresY(0, 100);
-  Lacze.UstawZakresZ(0, 60);
+  Lacze.UstawZakresX(0, 200);
+  Lacze.UstawZakresY(0, 200);
+  Lacze.UstawZakresZ(0, 100);
 
   Lacze.Rysuj();
 
@@ -113,9 +115,9 @@ int main() {
 
   std::cout<<"\tk - koniec dzialania programu"<<std::endl;
 
-  char x;
+  char wybor;
 
-  while(x != 'k'){
+  while(wybor != 'k'){
       double kat;
       double odleglosc;
       double promien;
@@ -126,12 +128,15 @@ int main() {
       std::cout<<"\t  laczna ilosc obiektow Wektor3D:"<< Vector3D::zwroc_ogolna_ilosc_wektorow() <<  std::endl <<  std::endl;
 
       std::cout<<"Wybieram : ( m - menu ) > ";
-      std::cin>>x;
-      switch (x){
+      std::cin>>wybor;
+      switch(wybor){
       case 'm':
             std::cout<<"\n\t**********************MENU***********************"<<std::endl;
             std::cout<<"\ta - Wybierz aktywnego drona"<<std::endl;
             std::cout<<"\tp - zadaj parametry przelotu"<<std::endl;
+            std::cout<<"\to - przelot zwiadowczy"<<std::endl;
+            std::cout<<"\td - dodaj element powierzchni"<<std::endl;
+            std::cout<<"\tu - usun element powierzchni"<<std::endl;
             std::cout<<"\tm - wyswietl menu"<<std::endl<<std::endl;
 
             std::cout<<"\tk - koniec dzialania programu"<<std::endl;
@@ -243,14 +248,47 @@ int main() {
             }
 
             break;
-      case 'k':
-            std::cout<<" Dziękuję za używanie mojego programu ;)"<<std::endl;
 
+      case 'd':{
+            int index;
+            double x, y;
+            Vector3D Skala;
+            std::cout<<"Wybierz rodzaj powierzchniowego elementu"<<std::endl;
+            std::cout<<"\t 1 - Gora z ostrym sztytem"<<std::endl;
+            std::cout<<"\t 2 - Gora z grania"<<std::endl;
+            std::cout<<"\t 3 - Plaskowyz"<<std::endl;
+
+            std::cout<<"Wprowadz numer typu elementu> "<<std::endl;
+            std::cin >> index;
+            std::cout<<"Podaj scale wzdluz kolejnych osi OX, OY, OZ> " << std::endl << "Wprowadz skale: " << std::endl;
+            std::cin >> Skala;
+            std::cout<<"Podaj wspolrzedne srodka podstawy x,y. " <<std::endl << "Wprowadz wspolrzedne: " << std::endl;
+            std::cin >> x;
+            std::cin >> y;
+            Vector3D polozenie(x, y, 0);
+            Scena.Dodaj_obstrukcje(Skala, polozenie, index, Lacze);
+            std::cout<<"Element zostal dodany do sceny." << std::endl;
+      }
+            break;
+      case 'u':{
+            int numer = 1;
+            std::cout<<"Wybierz element powierzchni do usuniecia:"<<std::endl;
+            for(std::list<objects_scene>::iterator iter = Scena.get_liste().begin(); iter != Scena.get_liste().end(); ++iter){
+              
+              std::cout<< numer <<"\t - Polozenie (x,y): " << iter->get_pozycje_x() << " " << iter->get_pozycje_y();
+              ++numer;
+            }
+      }
+            break;
+      case 'k':
+
+            std::cout<<" Dziękuję za używanie mojego programu ;)"<<std::endl;
+      
             break;
       default:
             std::cout<<" Niepoprawna operacja, symbol m to MENU"<<std::endl;
 
             break;
       }
-  }
+    }
 }

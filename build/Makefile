@@ -671,6 +671,60 @@ src/drone.cpp.s:
 	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/drone.cpp.s
 .PHONY : src/drone.cpp.s
 
+src/gora_z_grania.o: src/gora_z_grania.cpp.o
+
+.PHONY : src/gora_z_grania.o
+
+# target to build an object file
+src/gora_z_grania.cpp.o:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/gora_z_grania.cpp.o
+.PHONY : src/gora_z_grania.cpp.o
+
+src/gora_z_grania.i: src/gora_z_grania.cpp.i
+
+.PHONY : src/gora_z_grania.i
+
+# target to preprocess a source file
+src/gora_z_grania.cpp.i:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/gora_z_grania.cpp.i
+.PHONY : src/gora_z_grania.cpp.i
+
+src/gora_z_grania.s: src/gora_z_grania.cpp.s
+
+.PHONY : src/gora_z_grania.s
+
+# target to generate assembly for a file
+src/gora_z_grania.cpp.s:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/gora_z_grania.cpp.s
+.PHONY : src/gora_z_grania.cpp.s
+
+src/gora_ze_szczytem.o: src/gora_ze_szczytem.cpp.o
+
+.PHONY : src/gora_ze_szczytem.o
+
+# target to build an object file
+src/gora_ze_szczytem.cpp.o:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o
+.PHONY : src/gora_ze_szczytem.cpp.o
+
+src/gora_ze_szczytem.i: src/gora_ze_szczytem.cpp.i
+
+.PHONY : src/gora_ze_szczytem.i
+
+# target to preprocess a source file
+src/gora_ze_szczytem.cpp.i:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.i
+.PHONY : src/gora_ze_szczytem.cpp.i
+
+src/gora_ze_szczytem.s: src/gora_ze_szczytem.cpp.s
+
+.PHONY : src/gora_ze_szczytem.s
+
+# target to generate assembly for a file
+src/gora_ze_szczytem.cpp.s:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.s
+.PHONY : src/gora_ze_szczytem.cpp.s
+
 src/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp.o
 
 .PHONY : src/lacze_do_gnuplota.o
@@ -724,6 +778,60 @@ src/matrix3d.s: src/matrix3d.cpp.s
 src/matrix3d.cpp.s:
 	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/matrix3d.cpp.s
 .PHONY : src/matrix3d.cpp.s
+
+src/obiekt_sceny.o: src/obiekt_sceny.cpp.o
+
+.PHONY : src/obiekt_sceny.o
+
+# target to build an object file
+src/obiekt_sceny.cpp.o:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/obiekt_sceny.cpp.o
+.PHONY : src/obiekt_sceny.cpp.o
+
+src/obiekt_sceny.i: src/obiekt_sceny.cpp.i
+
+.PHONY : src/obiekt_sceny.i
+
+# target to preprocess a source file
+src/obiekt_sceny.cpp.i:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/obiekt_sceny.cpp.i
+.PHONY : src/obiekt_sceny.cpp.i
+
+src/obiekt_sceny.s: src/obiekt_sceny.cpp.s
+
+.PHONY : src/obiekt_sceny.s
+
+# target to generate assembly for a file
+src/obiekt_sceny.cpp.s:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/obiekt_sceny.cpp.s
+.PHONY : src/obiekt_sceny.cpp.s
+
+src/plaskowyz.o: src/plaskowyz.cpp.o
+
+.PHONY : src/plaskowyz.o
+
+# target to build an object file
+src/plaskowyz.cpp.o:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/plaskowyz.cpp.o
+.PHONY : src/plaskowyz.cpp.o
+
+src/plaskowyz.i: src/plaskowyz.cpp.i
+
+.PHONY : src/plaskowyz.i
+
+# target to preprocess a source file
+src/plaskowyz.cpp.i:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/plaskowyz.cpp.i
+.PHONY : src/plaskowyz.cpp.i
+
+src/plaskowyz.s: src/plaskowyz.cpp.s
+
+.PHONY : src/plaskowyz.s
+
+# target to generate assembly for a file
+src/plaskowyz.cpp.s:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/plaskowyz.cpp.s
+.PHONY : src/plaskowyz.cpp.s
 
 src/prism.o: src/prism.cpp.o
 
@@ -861,12 +969,24 @@ help:
 	@echo "... src/drone.o"
 	@echo "... src/drone.i"
 	@echo "... src/drone.s"
+	@echo "... src/gora_z_grania.o"
+	@echo "... src/gora_z_grania.i"
+	@echo "... src/gora_z_grania.s"
+	@echo "... src/gora_ze_szczytem.o"
+	@echo "... src/gora_ze_szczytem.i"
+	@echo "... src/gora_ze_szczytem.s"
 	@echo "... src/lacze_do_gnuplota.o"
 	@echo "... src/lacze_do_gnuplota.i"
 	@echo "... src/lacze_do_gnuplota.s"
 	@echo "... src/matrix3d.o"
 	@echo "... src/matrix3d.i"
 	@echo "... src/matrix3d.s"
+	@echo "... src/obiekt_sceny.o"
+	@echo "... src/obiekt_sceny.i"
+	@echo "... src/obiekt_sceny.s"
+	@echo "... src/plaskowyz.o"
+	@echo "... src/plaskowyz.i"
+	@echo "... src/plaskowyz.s"
 	@echo "... src/prism.o"
 	@echo "... src/prism.i"
 	@echo "... src/prism.s"

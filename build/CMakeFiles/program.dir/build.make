@@ -161,6 +161,58 @@ CMakeFiles/program.dir/src/scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/scene.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.cpp -o CMakeFiles/program.dir/src/scene.cpp.s
 
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../src/gora_ze_szczytem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_ze_szczytem.cpp
+
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_ze_szczytem.cpp > CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.i
+
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_ze_szczytem.cpp -o CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.s
+
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../src/obiekt_sceny.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/program.dir/src/obiekt_sceny.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/obiekt_sceny.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/obiekt_sceny.cpp
+
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/obiekt_sceny.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/obiekt_sceny.cpp > CMakeFiles/program.dir/src/obiekt_sceny.cpp.i
+
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/obiekt_sceny.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/obiekt_sceny.cpp -o CMakeFiles/program.dir/src/obiekt_sceny.cpp.s
+
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../src/gora_z_grania.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/program.dir/src/gora_z_grania.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/gora_z_grania.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_z_grania.cpp
+
+CMakeFiles/program.dir/src/gora_z_grania.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/gora_z_grania.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_z_grania.cpp > CMakeFiles/program.dir/src/gora_z_grania.cpp.i
+
+CMakeFiles/program.dir/src/gora_z_grania.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/gora_z_grania.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_z_grania.cpp -o CMakeFiles/program.dir/src/gora_z_grania.cpp.s
+
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../src/plaskowyz.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/program.dir/src/plaskowyz.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/plaskowyz.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/plaskowyz.cpp
+
+CMakeFiles/program.dir/src/plaskowyz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/plaskowyz.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/plaskowyz.cpp > CMakeFiles/program.dir/src/plaskowyz.cpp.i
+
+CMakeFiles/program.dir/src/plaskowyz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/plaskowyz.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/plaskowyz.cpp -o CMakeFiles/program.dir/src/plaskowyz.cpp.s
+
 program: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
 program: CMakeFiles/program.dir/src/block.cpp.o
 program: CMakeFiles/program.dir/src/vector3d.cpp.o
@@ -169,6 +221,10 @@ program: CMakeFiles/program.dir/src/cuboid.cpp.o
 program: CMakeFiles/program.dir/src/prism.cpp.o
 program: CMakeFiles/program.dir/src/drone.cpp.o
 program: CMakeFiles/program.dir/src/scene.cpp.o
+program: CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o
+program: CMakeFiles/program.dir/src/obiekt_sceny.cpp.o
+program: CMakeFiles/program.dir/src/gora_z_grania.cpp.o
+program: CMakeFiles/program.dir/src/plaskowyz.cpp.o
 program: CMakeFiles/program.dir/build.make
 
 .PHONY : program

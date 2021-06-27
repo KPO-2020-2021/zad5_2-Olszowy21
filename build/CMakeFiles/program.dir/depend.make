@@ -27,11 +27,38 @@ CMakeFiles/program.dir/src/drone.cpp.o: ../inc/drone.hpp
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/matrix.hpp
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/matrix3d.hpp
+CMakeFiles/program.dir/src/drone.cpp.o: ../inc/obiekt_sceny.hpp
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/prism.hpp
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/size.hpp
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/vector.hpp
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/vector3d.hpp
 CMakeFiles/program.dir/src/drone.cpp.o: ../src/drone.cpp
+
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/block.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/cuboid.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/gora_z_grania.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/lacze_do_gnuplota.hh
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/matrix.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/matrix3d.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/obiekt_sceny.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/prism.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/size.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/vector.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../inc/vector3d.hpp
+CMakeFiles/program.dir/src/gora_z_grania.cpp.o: ../src/gora_z_grania.cpp
+
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/block.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/cuboid.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/gora_ze_szczytem.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/lacze_do_gnuplota.hh
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/matrix.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/matrix3d.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/obiekt_sceny.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/prism.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/size.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/vector.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../inc/vector3d.hpp
+CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o: ../src/gora_ze_szczytem.cpp
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../src/lacze_do_gnuplota.cpp
@@ -43,6 +70,35 @@ CMakeFiles/program.dir/src/matrix3d.cpp.o: ../inc/size.hpp
 CMakeFiles/program.dir/src/matrix3d.cpp.o: ../inc/vector.hpp
 CMakeFiles/program.dir/src/matrix3d.cpp.o: ../inc/vector3d.hpp
 CMakeFiles/program.dir/src/matrix3d.cpp.o: ../src/matrix3d.cpp
+
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/block.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/cuboid.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/drone.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/gora_z_grania.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/gora_ze_szczytem.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/lacze_do_gnuplota.hh
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/matrix.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/matrix3d.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/obiekt_sceny.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/plaskowyz.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/prism.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/size.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/vector.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../inc/vector3d.hpp
+CMakeFiles/program.dir/src/obiekt_sceny.cpp.o: ../src/obiekt_sceny.cpp
+
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/block.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/cuboid.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/lacze_do_gnuplota.hh
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/matrix.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/matrix3d.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/obiekt_sceny.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/plaskowyz.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/prism.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/size.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/vector.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../inc/vector3d.hpp
+CMakeFiles/program.dir/src/plaskowyz.cpp.o: ../src/plaskowyz.cpp
 
 CMakeFiles/program.dir/src/prism.cpp.o: ../inc/block.hpp
 CMakeFiles/program.dir/src/prism.cpp.o: ../inc/lacze_do_gnuplota.hh
@@ -57,9 +113,13 @@ CMakeFiles/program.dir/src/prism.cpp.o: ../src/prism.cpp
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/block.hpp
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/cuboid.hpp
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/drone.hpp
+CMakeFiles/program.dir/src/scene.cpp.o: ../inc/gora_z_grania.hpp
+CMakeFiles/program.dir/src/scene.cpp.o: ../inc/gora_ze_szczytem.hpp
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/matrix.hpp
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/matrix3d.hpp
+CMakeFiles/program.dir/src/scene.cpp.o: ../inc/obiekt_sceny.hpp
+CMakeFiles/program.dir/src/scene.cpp.o: ../inc/plaskowyz.hpp
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/prism.hpp
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/scene.hpp
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/size.hpp

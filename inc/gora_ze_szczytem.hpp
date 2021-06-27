@@ -2,8 +2,6 @@
 
 #include "obiekt_sceny.hpp"
 
-
-
 class Mount1: public objects_scene{ // Ostroslup
 protected:
 
@@ -24,11 +22,15 @@ public:
 
 // Konstruktory 
 
-    Mount1(std::string Filename_oryginal, Vector3D skala, Vector3D polozenie);
+    Mount1(std::string Filename_oryginal, std::string File_name_anime , Vector3D &skala, Vector3D &polozenie);
     
 // Metody
 
-    void inicjuj_Mount1(std::string Filename_oryginal, Vector3D &skala, Vector3D &Polozenie );
+    void inicjuj_Mount1(std::string File_name_anime, Vector3D &skala, Vector3D &polozenie );
+
+    void ze_wzora_do_animatora();
+
+    virtual std::string zwroc_typ_obiektu() {return "Szczyt";};
 
     const Vector<double, SIZE> &operator [] (unsigned int index) const;
 

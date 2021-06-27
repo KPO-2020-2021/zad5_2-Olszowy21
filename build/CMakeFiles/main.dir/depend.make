@@ -7,12 +7,14 @@ CMakeFiles/main.dir/app/main.cpp.o: ../inc/drone.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/matrix.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/matrix3d.hpp
+CMakeFiles/main.dir/app/main.cpp.o: ../inc/obiekt_sceny.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/prism.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/scene.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/size.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/vector.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/vector3d.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp
+CMakeFiles/main.dir/app/main.cpp.o: ../inc/obiekt_sceny.hpp
 CMakeFiles/main.dir/app/main.cpp.o: ../tests/doctest/doctest.h
 CMakeFiles/main.dir/app/main.cpp.o: exampleConfig.h
 

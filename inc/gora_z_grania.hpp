@@ -3,7 +3,6 @@
 #include "obiekt_sceny.hpp"
 
 
-
 class Mount2: public objects_scene{ // grora z grania
 protected:
 
@@ -24,12 +23,16 @@ public:
 
 // Konstruktory 
 
-    Mount2(std::string Filename_oryginal, Vector3D skala, Vector3D polozenie);
+    Mount2(std::string Filename_oryginal, std::string File_name_anime , Vector3D &skala, Vector3D &polozenie);
     
     
 // Metody
 
     void inicjuj_Mount2(std::string Filename_oryginal, Vector3D &skala, Vector3D &Polozenie );
+
+    void ze_wzora_do_animatora();
+
+    virtual std::string zwroc_typ_obiektu() {return "Gran";};
 
     const Vector<double, SIZE> &operator [] (unsigned int index) const;
 

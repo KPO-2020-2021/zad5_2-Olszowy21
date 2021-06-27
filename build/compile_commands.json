@@ -45,6 +45,26 @@
   "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/scene.cpp"
 },
 {
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/gora_ze_szczytem.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_ze_szczytem.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_ze_szczytem.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/obiekt_sceny.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/obiekt_sceny.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/obiekt_sceny.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/gora_z_grania.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_z_grania.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/gora_z_grania.cpp"
+},
+{
+  "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/plaskowyz.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/plaskowyz.cpp",
+  "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/src/plaskowyz.cpp"
+},
+{
   "directory": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build/tests",
   "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/build -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc -I/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/main.cpp.o -c /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/tests/main.cpp",
   "file": "/home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/tests/main.cpp"

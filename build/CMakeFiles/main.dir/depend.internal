@@ -8,11 +8,13 @@ CMakeFiles/main.dir/app/main.cpp.o
  ../inc/lacze_do_gnuplota.hh
  ../inc/matrix.hpp
  ../inc/matrix3d.hpp
+ ../inc/obiekt_sceny.hpp
  ../inc/prism.hpp
  ../inc/scene.hpp
  ../inc/size.hpp
  ../inc/vector.hpp
  ../inc/vector3d.hpp
  /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/app/main.cpp
+ /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/inc/obiekt_sceny.hpp
  /home/kirlos/Dokumenty/studia/prog_o/repos/zad5_2-Olszowy21/tests/doctest/doctest.h
  exampleConfig.h
