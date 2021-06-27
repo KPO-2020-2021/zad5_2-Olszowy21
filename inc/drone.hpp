@@ -1,8 +1,9 @@
 #pragma once
 
 #include "cuboid.hpp"
+#include "obiekt_sceny.hpp"
 
-class Drone{
+class Drone :public objects_scene{
 protected:
 
     Vector3D Polozenie;

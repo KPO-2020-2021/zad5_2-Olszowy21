@@ -24,7 +24,6 @@ protected:
 
     double kat_do_globalnego;
 
-
 public:
 
     Vector3D Skrobanie_do_rodzica(const Vector3D & top) const;
@@ -44,5 +43,7 @@ public:
     void Zamknij_Plik_animowany(std::ofstream &out) const;
 
     void set_kat(double kat) { kat_do_globalnego = kat;};
+
+    virtual void Inicjuj_obiekt(Vector3D &tmp);
 
 };

@@ -15,6 +15,10 @@
 #include "matrix3d.hpp"
 #include "vector3d.hpp"
 
+void dodaj_przeszkode(){
+    std::string File_name_obstructions;
+    std::cout << std::endl << "Wprowadź nazwę pliku ";
+}
 
 /*
  * Simple main program that demontrates how access
@@ -36,6 +40,14 @@ int main() {
   Drone *Wskaznik_na_drona;
   std::ofstream FILE;
 
+  std::string File_name_obstructions[6];
+  File_name_obstructions[0] = "../datasets/ostroslup.dat";
+  File_name_obstructions[1] = "../datasets/gran.dat";
+  File_name_obstructions[2] = "../datasets/plaskowyz.dat";
+  File_name_obstructions[3] = "../datasets/rotor31.dat";
+  File_name_obstructions[4] = "../datasets/rotor41.dat";
+  File_name_obstructions[5] = "../datasets/rozklad_lotu.dat";
+
   std::string File_name_anime[6];                    // 0 dla korpusu od 1 do 4 dla rotorów oraz 5 dla pliku do rysowania ścieżki lotu
   File_name_anime[0] = "../datasets/cuboid1.dat";
   File_name_anime[1] = "../datasets/rotor1.dat";
@@ -54,8 +66,15 @@ int main() {
 
   std::string Cuboid_oryginal;
   std::string Prism_oryginal;
+  std::string Ostroslup_oryginal;
+  std::string Gran_oryginal;
+  std::string Plaskowyz_oryginal;
+
   Cuboid_oryginal = "../datasets/cuboid_oryginal.dat";
   Prism_oryginal = "../datasets/prism_oryginal.dat";
+  Ostroslup_oryginal = "../datasets/ostroslup_oryginal.dat";
+  Gran_oryginal = "../datasets/gran_oryginal.dat";
+  Plaskowyz_oryginal = "../datasets/plaskowyz_oryginal.dat";
   
   Vector3D polozenie1(20, 20, 0);
   Vector3D polozenie2(5, 5, 0);
@@ -81,9 +100,9 @@ int main() {
 
   Lacze.Inicjalizuj();
 
-  Lacze.UstawZakresX(-100, 100);
-  Lacze.UstawZakresY(-100, 100);
-  Lacze.UstawZakresZ(0, 100);
+  Lacze.UstawZakresX(0, 100);
+  Lacze.UstawZakresY(0, 100);
+  Lacze.UstawZakresZ(0, 60);
 
   Lacze.Rysuj();
 

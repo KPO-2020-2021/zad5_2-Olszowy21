@@ -1,5 +1,6 @@
 #include "block.hpp"
 
+
 bool Block::Otworz_Plik_animowany(std::ofstream &out) const{
 
        std::string File_name = get_filename_anime();

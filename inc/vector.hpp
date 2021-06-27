@@ -9,8 +9,9 @@
 #include <memory>
 #include <unistd.h>
 #include <math.h>
-#include <string>
 #include <sstream>
+#include <stdio.h>
+#include <string>
 #include "lacze_do_gnuplota.hh"
 
 #define MIN_DIFF 0.0000001
