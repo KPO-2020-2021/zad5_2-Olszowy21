@@ -46,7 +46,7 @@ void Cuboid::inicjuj_cuboida(std::string Filename_oryginal , Vector3D &skala, Ve
 
     set_skala(skala);
 
-    oryginal.open(Filename_oryginal, std::ios::in );
+    oryginal.open(Filename_oryginal.c_str(), std::ios::in );
 
     if(oryginal.is_open()){
         int licznik = 1;                        // zmienna pomagająca poprawnie dodać dane do wiechrzołków

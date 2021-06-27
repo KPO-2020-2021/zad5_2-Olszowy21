@@ -21,7 +21,7 @@ public:
 
     void Dodaj_drona(Drone droniszcze);
 
-    void Dodaj_obstrukcje(std::string Plaskowyz_oryginal, Vector3D &skala, Vector3D &polozenie, int index, PzG::LaczeDoGNUPlota &Lacze);
+    void Dodaj_obstrukcje(std::string *File_oryginal, Vector3D &skala, Vector3D &polozenie, int index, PzG::LaczeDoGNUPlota &Lacze);
 
     void Usun_obstrukt(int index, PzG::LaczeDoGNUPlota &Lacze);
 

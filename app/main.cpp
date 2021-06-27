@@ -61,15 +61,17 @@ int main() {
 
   Cuboid_oryginal = "../datasets/cuboid_oryginal.dat";
   Prism_oryginal = "../datasets/prism_oryginal.dat";
-  Ostroslup_oryginal = "../datasets/ostroslup_oryginal.dat";
-  Gran_oryginal = "../datasets/gran_oryginal.dat";
-  Plaskowyz_oryginal = "../datasets/plaskowyz_oryginal.dat";
+
+  std::string File_name_oryginal[3];
+  File_name_oryginal[0] = "../datasets/ostroslup_oryginal.dat";
+  File_name_oryginal[1] = "../datasets/gran_oryginal.dat";
+  File_name_oryginal[2] = "../datasets/plaskowyz_oryginal.dat";
   
   Vector3D polozenie1(20, 20, 0);
   Vector3D polozenie2(5, 5, 0);
-  Vector3D polozenie3(30, 35, 0);
-  Vector3D polozenie4(60, 60, 0);
-  Vector3D polozenie5(40, 10, 0);
+  Vector3D polozenie3(100, 25, 0);
+  Vector3D polozenie4(20, 100, 0);
+  Vector3D polozenie5(50, 50, 0);
 
 
   Vector3D sciezka_lotu[4];
@@ -86,13 +88,13 @@ int main() {
   Scena.Dodaj_drona(dron1);
   Scena.Dodaj_drona(dron2);
 
-  Vector3D skala1(10, 10, 0);
-  Vector3D skala2(5, 20, 0);
-  Vector3D skala3(15, 2, 0);
+  Vector3D skala1(20, 20, 40);
+  Vector3D skala2(20, 30, 30);
+  Vector3D skala3(20, 20, 10);
 
-  Scena.Dodaj_obstrukcje(Ostroslup_oryginal, skala1, polozenie3, 1, Lacze);
-  Scena.Dodaj_obstrukcje(Gran_oryginal, polozenie4, 2, Lacze);
-  Scena.Dodaj_obstrukcje(Plaskowyz_oryginal, polozenie5, 3, Lacze);
+  Scena.Dodaj_obstrukcje(File_name_oryginal, skala1, polozenie3, 1, Lacze);
+  Scena.Dodaj_obstrukcje(File_name_oryginal, skala2, polozenie4, 2, Lacze);
+  Scena.Dodaj_obstrukcje(File_name_oryginal, skala2, polozenie5, 3, Lacze);
 
   Wskaznik_na_drona = Scena.use_avtive_drone();
 
@@ -117,178 +119,182 @@ int main() {
 
   char wybor;
 
-  while(wybor != 'k'){
-      double kat;
-      double odleglosc;
-      double promien;
+  do{
+    double kat;
+    double odleglosc;
+    double promien;
 
-      std::cout<<"\nPolozenie aktywnego drona " << (*Wskaznik_na_drona).Get_polozeniex() << " " << (*Wskaznik_na_drona).Get_polozeniey() << std::endl << std::endl;
+    std::cout<<"\nPolozenie aktywnego drona " << (*Wskaznik_na_drona).Get_polozeniex() << " " << (*Wskaznik_na_drona).Get_polozeniey() << std::endl << std::endl;
 
-      std::cout<<"\tAktualna ilosc obiektow Wektor3D:"<< Vector3D::zwroc_aktywna_ilosc_wektorow() << std::endl;
-      std::cout<<"\t  laczna ilosc obiektow Wektor3D:"<< Vector3D::zwroc_ogolna_ilosc_wektorow() <<  std::endl <<  std::endl;
+    std::cout<<"\tAktualna ilosc obiektow Wektor3D:"<< Vector3D::zwroc_aktywna_ilosc_wektorow() << std::endl;
+    std::cout<<"\t  laczna ilosc obiektow Wektor3D:"<< Vector3D::zwroc_ogolna_ilosc_wektorow() <<  std::endl <<  std::endl;
 
-      std::cout<<"Wybieram : ( m - menu ) > ";
-      std::cin>>wybor;
-      switch(wybor){
-      case 'm':
-            std::cout<<"\n\t**********************MENU***********************"<<std::endl;
-            std::cout<<"\ta - Wybierz aktywnego drona"<<std::endl;
-            std::cout<<"\tp - zadaj parametry przelotu"<<std::endl;
-            std::cout<<"\to - przelot zwiadowczy"<<std::endl;
-            std::cout<<"\td - dodaj element powierzchni"<<std::endl;
-            std::cout<<"\tu - usun element powierzchni"<<std::endl;
-            std::cout<<"\tm - wyswietl menu"<<std::endl<<std::endl;
+    std::cout<<"Wybieram : ( m - menu ) > ";
+    std::cin>>wybor;
+    switch(wybor){
+    case 'm':
+          std::cout<<"\n\t**********************MENU***********************"<<std::endl;
+          std::cout<<"\ta - Wybierz aktywnego drona"<<std::endl;
+          std::cout<<"\tp - zadaj parametry przelotu"<<std::endl;
+          std::cout<<"\to - przelot zwiadowczy"<<std::endl;
+          std::cout<<"\td - dodaj element powierzchni"<<std::endl;
+          std::cout<<"\tu - usun element powierzchni"<<std::endl;
+          std::cout<<"\tm - wyswietl menu"<<std::endl<<std::endl;
 
-            std::cout<<"\tk - koniec dzialania programu"<<std::endl;
+          std::cout<<"\tk - koniec dzialania programu"<<std::endl;
 
-            std::cin.ignore(10000, '\n');
-            break;
-      case 'a':
+          std::cin.ignore(10000, '\n');
+          break;
+    case 'a':
 
-            std::cout<<"\tWybór aktywnego drona "<<std::endl;
+          std::cout<<"\tWybór aktywnego drona "<<std::endl;
 
-            std::cout<<"\t1 - Polozenie (x,y): " << dron1.Get_polozeniex() << " " << dron1.Get_polozeniey();
-            if( Scena.index_aktywnego_drona() == 0){
+          std::cout<<"\t1 - Polozenie (x,y): " << dron1.Get_polozeniex() << " " << dron1.Get_polozeniey();
+          if( Scena.index_aktywnego_drona() == 0){
 
-              std::cout << " <---- aktywny dron";
+            std::cout << " <---- aktywny dron";
 
-            }
-            std::cout << std::endl;
+          }
+          std::cout << std::endl;
 
-            std::cout<<"\t2 - Polozenie (x,y): " << dron2.Get_polozeniex() << " " << dron2.Get_polozeniey();
-            if( Scena.index_aktywnego_drona() == 1){
+          std::cout<<"\t2 - Polozenie (x,y): " << dron2.Get_polozeniex() << " " << dron2.Get_polozeniey();
+          if( Scena.index_aktywnego_drona() == 1){
 
-              std::cout << " <---- aktywny dron";
+            std::cout << " <---- aktywny dron";
 
-            }
-            std::cout << std::endl;
+          }
+          std::cout << std::endl;
 
-            std::cout << std::endl << "Wprowadź numer aktywnego drona ---> ";
-            int index;
+          std::cout << std::endl << "Wprowadź numer aktywnego drona ---> ";
+          int index;
+          std::cin >> index;
+
+          if(index > 0 && index < 3){
+            Scena.avtive_drone(index);
+            Wskaznik_na_drona = Scena.use_avtive_drone();
+          }
+          else{
+            std::cout << std::endl << "Wprowadzano zły numer proszę podać poprawny";
             std::cin >> index;
-
             if(index > 0 && index < 3){
               Scena.avtive_drone(index);
               Wskaznik_na_drona = Scena.use_avtive_drone();
             }
             else{
-              std::cout << std::endl << "Wprowadzano zły numer proszę podać poprawny";
-              std::cin >> index;
-              if(index > 0 && index < 3){
-                Scena.avtive_drone(index);
-                Wskaznik_na_drona = Scena.use_avtive_drone();
-              }
-              else{
-                std::cout << std::endl << "";
-              }
+              std::cout << std::endl << "";
+            }
+          }
+
+          break;
+    case 'p':
+          std::cout << "Podaj kierunek lotu (kat w stopniach) > ";
+          std::cin >> kat;
+          std::cout  << "Podaj długość lotu > ";
+          std::cin >> odleglosc;
+          std::cout << "Rysuje zaplanowana sciezke lotu ..." << std::endl;
+          (*Wskaznik_na_drona).Maluj_rozklad_lotu(sciezka_lotu, File_name_anime, kat, odleglosc, Lacze);
+
+          std::cout << "Realizacja przelotu ..." << std::endl;
+
+          if((*Wskaznik_na_drona).up_down(50, Lacze)){
+
+            (*Wskaznik_na_drona).forward_backward(kat, odleglosc, Lacze);
+
+            if((*Wskaznik_na_drona).up_down(-50, Lacze)){
+
+              std::cout << "Dron wyladował ..." << std::endl << std::endl;
+
             }
 
-            break;
-      case 'p':
-            std::cout << "Podaj kierunek lotu (kat w stopniach) > ";
-            std::cin >> kat;
-            std::cout  << "Podaj długość lotu > ";
-            std::cin >> odleglosc;
-            std::cout << "Rysuje zaplanowana sciezke lotu ..." << std::endl;
-            (*Wskaznik_na_drona).Maluj_rozklad_lotu(sciezka_lotu, File_name_anime, kat, odleglosc, Lacze);
+            FILE.open(File_name_anime[5].c_str() , std::ios::trunc );
+            FILE.close();
+            
+          }
 
-            std::cout << "Realizacja przelotu ..." << std::endl;
+          break;
+    case 'o':
 
-            if((*Wskaznik_na_drona).up_down(50, Lacze)){
+          std::cout << "Wykona się zwiad po zadanym promieniu > ";
+          std::cin >> promien;
+          std::cout << "Rysuje zaplanowana sciezke lotu ..." << std::endl;
 
-              (*Wskaznik_na_drona).forward_backward(kat, odleglosc, Lacze);
+          (*Wskaznik_na_drona).Zwiad(sciezka_lotu_po_okregu, File_name_anime, promien, Lacze);
 
-              if((*Wskaznik_na_drona).up_down(-50, Lacze)){
+          std::cout << "Realizacja przelotu ..." << std::endl;
 
-                std::cout << "Dron wyladował ..." << std::endl << std::endl;
+          if((*Wskaznik_na_drona).up_down(50, Lacze)){
 
-              }
+            //double kat_do_edycji = (*Wskaznik_na_drona).Get_kat_do_globalnego();
+            double kaciwo1 = -60;
+            (*Wskaznik_na_drona).forward_backward(kaciwo1, promien, Lacze);
 
-              FILE.open(File_name_anime[5].c_str() , std::ios::trunc );
-              FILE.close();
-              
-            }
-
-            break;
-      case 'o':
-
-            std::cout << "Wykona się zwiad po zadanym promieniu > ";
-            std::cin >> promien;
-            std::cout << "Rysuje zaplanowana sciezke lotu ..." << std::endl;
-
-            (*Wskaznik_na_drona).Zwiad(sciezka_lotu_po_okregu, File_name_anime, promien, Lacze);
-
-            std::cout << "Realizacja przelotu ..." << std::endl;
-
-            if((*Wskaznik_na_drona).up_down(50, Lacze)){
-
-              //double kat_do_edycji = (*Wskaznik_na_drona).Get_kat_do_globalnego();
-              double kaciwo1 = -60;
-              (*Wskaznik_na_drona).forward_backward(kaciwo1, promien, Lacze);
-
-              for(int i = 0; i < 5; ++i ){
-                //kat_do_edycji = (*Wskaznik_na_drona).Get_kat_do_globalnego();
-                kaciwo1 = 60;
-                (*Wskaznik_na_drona).forward_backward(kaciwo1, promien, Lacze);
-              }
-
+            for(int i = 0; i < 5; ++i ){
               //kat_do_edycji = (*Wskaznik_na_drona).Get_kat_do_globalnego();
-              kaciwo1 = 120;
-              (*Wskaznik_na_drona).forward_backward(kaciwo1, 0, Lacze);
-
-              if((*Wskaznik_na_drona).up_down(-50, Lacze)){
-
-                std::cout << "Dron wyladował ..." << std::endl << std::endl;
-
-              }
-
-              FILE.open(File_name_anime[5].c_str() , std::ios::trunc );
-              FILE.close();
-              
+              kaciwo1 = 60;
+              (*Wskaznik_na_drona).forward_backward(kaciwo1, promien, Lacze);
             }
 
-            break;
+            //kat_do_edycji = (*Wskaznik_na_drona).Get_kat_do_globalnego();
+            kaciwo1 = 120;
+            (*Wskaznik_na_drona).forward_backward(kaciwo1, 0, Lacze);
 
-      case 'd':{
-            int index;
-            double x, y;
-            Vector3D Skala;
-            std::cout<<"Wybierz rodzaj powierzchniowego elementu"<<std::endl;
-            std::cout<<"\t 1 - Gora z ostrym sztytem"<<std::endl;
-            std::cout<<"\t 2 - Gora z grania"<<std::endl;
-            std::cout<<"\t 3 - Plaskowyz"<<std::endl;
+            if((*Wskaznik_na_drona).up_down(-50, Lacze)){
 
-            std::cout<<"Wprowadz numer typu elementu> "<<std::endl;
-            std::cin >> index;
-            std::cout<<"Podaj scale wzdluz kolejnych osi OX, OY, OZ> " << std::endl << "Wprowadz skale: " << std::endl;
-            std::cin >> Skala;
-            std::cout<<"Podaj wspolrzedne srodka podstawy x,y. " <<std::endl << "Wprowadz wspolrzedne: " << std::endl;
-            std::cin >> x;
-            std::cin >> y;
-            Vector3D polozenie(x, y, 0);
-            Scena.Dodaj_obstrukcje(Skala, polozenie, index, Lacze);
-            std::cout<<"Element zostal dodany do sceny." << std::endl;
-      }
-            break;
-      case 'u':{
-            int numer = 1;
-            std::cout<<"Wybierz element powierzchni do usuniecia:"<<std::endl;
-            for(std::list<objects_scene>::iterator iter = Scena.get_liste().begin(); iter != Scena.get_liste().end(); ++iter){
-              
-              std::cout<< numer <<"\t - Polozenie (x,y): " << iter->get_pozycje_x() << " " << iter->get_pozycje_y();
-              ++numer;
+              std::cout << "Dron wyladował ..." << std::endl << std::endl;
+
             }
-      }
-            break;
-      case 'k':
 
-            std::cout<<" Dziękuję za używanie mojego programu ;)"<<std::endl;
-      
-            break;
-      default:
-            std::cout<<" Niepoprawna operacja, symbol m to MENU"<<std::endl;
+            FILE.open(File_name_anime[5].c_str() , std::ios::trunc );
+            FILE.close();
+            
+          }
 
-            break;
-      }
+          break;
+
+    case 'd':{
+          int index;
+          double x, y;
+          Vector3D Skala;
+          std::cout<<"Wybierz rodzaj powierzchniowego elementu"<<std::endl;
+          std::cout<<"\t 1 - Gora z ostrym szczytem"<<std::endl;
+          std::cout<<"\t 2 - Gora z grania"<<std::endl;
+          std::cout<<"\t 3 - Plaskowyz"<<std::endl;
+
+          std::cout<<"Wprowadz numer typu elementu> "<<std::endl;
+          std::cin >> index;
+          std::cout<<"Podaj scale wzdluz kolejnych osi OX, OY, OZ> " << std::endl << "Wprowadz skale: " << std::endl;
+          std::cin >> Skala;
+          std::cout<<"Podaj wspolrzedne srodka podstawy x,y. " <<std::endl << "Wprowadz wspolrzedne: " << std::endl;
+          std::cin >> x;
+          std::cin >> y;
+          Vector3D polozenie(x, y, 0);
+          Scena.Dodaj_obstrukcje(File_name_oryginal, Skala, polozenie, index, Lacze);
+          std::cout<<"Element zostal dodany do sceny." << std::endl;
     }
+          break;
+    case 'u':{
+          int numer = 1;
+          std::cout<<"Wybierz element powierzchni do usuniecia:"<<std::endl;
+
+          for(std::list<objects_scene>::iterator iter = Scena.get_liste().begin(); iter != Scena.get_liste().end(); ++iter){
+            
+            std::cout <<"\t" << numer <<" - Polozenie (x,y): " << iter->get_pozycje_x() << " " << iter->get_pozycje_y() << "\tTyp: " << iter->zwroc_typ_obiektu() << std::endl;
+            usleep(10000000);
+            ++numer;
+          }
+    }
+          break;
+    case 'k':
+
+          std::cout<<" Dziękuję za używanie mojego programu ;)"<<std::endl;
+    
+          break;
+    default:
+          std::cout<<" Niepoprawna operacja, symbol m to MENU"<<std::endl;
+
+          break;
+    }
+  }
+  while(wybor != 'k');
+  exit(0);
 }

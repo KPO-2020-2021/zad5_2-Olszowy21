@@ -28,7 +28,7 @@ public:
     
 // Metody
 
-    void inicjuj_Mount2(std::string Filename_oryginal, Vector3D &skala, Vector3D &Polozenie );
+    void inicjuj_Mount2(std::string Filename_oryginal);
 
     void ze_wzora_do_animatora();
 

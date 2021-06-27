@@ -28,7 +28,7 @@ public:
     
 // Metody
 
-    void inicjuj_Mount3(std::string Filename_oryginal, Vector3D &skala, Vector3D &polozenie );
+    void inicjuj_Mount3(std::string Filename_oryginal);
 
     virtual std::string zwroc_typ_obiektu() {return "Plaskowyz";};
 

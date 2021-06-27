@@ -12,9 +12,15 @@ Mount3::Mount3(std::string Filename_oryginal, std::string File_name_anime, Vecto
 
     kat_do_globalnego = 0;
 
+    set_skala(skala);
+
+    Polozenie = polozenie;
+
     set_filename_anime(File_name_anime);
 
-    inicjuj_Mount3( Filename_oryginal, skala, polozenie);
+    inicjuj_Mount3( Filename_oryginal );
+
+    ze_wzora_do_animatora();
 
 }
 
@@ -40,15 +46,11 @@ const Vector<double, SIZE>& Mount3::operator [] (unsigned int index) const{
 }
 
 
-void Mount3::inicjuj_Mount3(std::string Filename_oryginal , Vector3D &skala, Vector3D &polozenie ){
+void Mount3::inicjuj_Mount3(std::string Filename_oryginal){
     
     Vector3D broker;
 
     std::ifstream oryginal;
-
-    this->Polozenie = polozenie;
-
-    set_skala(skala);
 
     oryginal.open(Filename_oryginal.c_str(), std::ios::in );
 
@@ -83,6 +85,7 @@ void Mount3::ze_wzora_do_animatora(){
     Vector3D broker;
 
     std::ofstream anime;
+    
     int Licznik = 1;
     
     if(Otworz_Plik_animowany(anime)){

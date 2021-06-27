@@ -30,27 +30,34 @@ void Scene::Dodaj_drona(Drone droniszcze){
 
 }
 
-void Scene::Dodaj_obstrukcje(std::string File_oryginal, Vector3D &skala, Vector3D &polozenie, int index, PzG::LaczeDoGNUPlota &Lacze){
+void Scene::Dodaj_obstrukcje(std::string *File_oryginal, Vector3D &skala, Vector3D &polozenie, int index, PzG::LaczeDoGNUPlota &Lacze){
     
-  std::string file_name = "../datasets/obiekt" + std::to_string(Pudlo_z_obstrukcjami.size() - Pudlo_z_dronami.size()) + ".dat";
-  std::cout << file_name << std::endl;
-  usleep(100000);
+  std::string file_name_anime = "../datasets/obiekt" + std::to_string(Pudlo_z_obstrukcjami.size() - Pudlo_z_dronami.size()) + ".dat";
+  std::cout << file_name_anime << std::endl;
+
   objects_scene obstrukt;
   
   switch(index){
 
   case 1:
-    obstrukt = Mount1(File_oryginal, File_name_anime, skala, polozenie);
-
+    obstrukt = Mount1(File_oryginal[0], file_name_anime, skala, polozenie);
+    Pudlo_z_obstrukcjami.push_back(obstrukt);
+    Lacze.DodajNazwePliku(file_name_anime.c_str());
+    Lacze.Rysuj();
     break;
 
   case 2:
-    obstrukt = Mount2(File_oryginal, File_name_anime, skala , polozenie);
-  
+    obstrukt = Mount2(File_oryginal[1], file_name_anime, skala , polozenie);
+    Pudlo_z_obstrukcjami.push_back(obstrukt);
+    Lacze.DodajNazwePliku(file_name_anime.c_str());
+    Lacze.Rysuj();
     break;
 
   case 3:
-    obstrukt = Mount3(File_oryginal, File_name_anime, skala , polozenie);
+    obstrukt = Mount3(File_oryginal[2], file_name_anime, skala , polozenie);
+    Pudlo_z_obstrukcjami.push_back(obstrukt);
+    Lacze.DodajNazwePliku(file_name_anime.c_str());
+    Lacze.Rysuj();
   
     break;
 
@@ -58,8 +65,6 @@ void Scene::Dodaj_obstrukcje(std::string File_oryginal, Vector3D &skala, Vector3
     break;
   }
 
-  Pudlo_z_obstrukcjami.push_back(obstrukt);
-  Lacze.Rysuj();
 }
 
 void Scene::Usun_obstrukt(int index, PzG::LaczeDoGNUPlota &Lacze){

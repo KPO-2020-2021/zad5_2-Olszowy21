@@ -11,9 +11,15 @@ Mount2::Mount2(std::string Filename_oryginal, std::string File_name_anime, Vecto
 
     kat_do_globalnego = 0;
 
+    set_skala(skala);
+
+    Polozenie = polozenie;
+
     set_filename_anime(File_name_anime);
 
-    inicjuj_Mount2( Filename_oryginal, skala, polozenie);
+    inicjuj_Mount2( Filename_oryginal );
+
+    ze_wzora_do_animatora();
 
 }
 
@@ -38,17 +44,13 @@ const Vector<double, SIZE>& Mount2::operator [] (unsigned int index) const{
 }
 
 
-void Mount2::inicjuj_Mount2(std::string Filename_oryginal , Vector3D &skala, Vector3D &polozenie ){
+void Mount2::inicjuj_Mount2(std::string Filename_oryginal){
     
     Vector3D broker;
 
     std::ifstream oryginal;
 
-    Polozenie = polozenie;
-
-    set_skala(skala);
-
-    oryginal.open(Filename_oryginal, std::ios::in );
+    oryginal.open(Filename_oryginal.c_str(), std::ios::in );
 
     if(oryginal.is_open()){
         int licznik = 1;                        // zmienna pomagająca poprawnie dodać dane do wiechrzołków

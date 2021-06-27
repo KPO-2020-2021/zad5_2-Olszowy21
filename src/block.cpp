@@ -5,7 +5,7 @@ bool Block::Otworz_Plik_animowany(std::ofstream &out) const{
 
        std::string File_name = get_filename_anime();
 
-       out.open(File_name, std::ios::trunc);
+       out.open(File_name.c_str(), std::ios::trunc);
 
        if (!out.is_open())  {
               std::cerr << ":(  Operacja otwarcia do zapisu" << std::endl

@@ -10,9 +10,15 @@ Mount1::Mount1(std::string Filename_oryginal,std::string File_name_anime, Vector
 
     kat_do_globalnego = 0;
 
+    set_skala(skala);
+
+    Polozenie = polozenie;
+
     set_filename_anime(File_name_anime);
 
-    inicjuj_Mount1( Filename_oryginal, skala, polozenie);
+    inicjuj_Mount1( Filename_oryginal );
+
+    ze_wzora_do_animatora();
 
 }
 
@@ -36,21 +42,17 @@ const Vector<double, SIZE>& Mount1::operator [] (unsigned int index) const{
     return top[index];
 }
 
-void Mount1::inicjuj_Mount1(std::string Filename_oryginal , Vector3D &skala, Vector3D &polozenie ){
+void Mount1::inicjuj_Mount1(std::string Filename_oryginal){
     
     Vector3D broker;
 
     std::ifstream oryginal;
 
-    this->Polozenie = polozenie;
-
-    set_skala(skala);
-
-    oryginal.open(Filename_oryginal, std::ios::in );
+    oryginal.open(Filename_oryginal.c_str(), std::ios::in );
+    std::cout << "Przed OTWORZYŁO SZMATE" << std::endl;
 
     if(oryginal.is_open()){
-        std::cout << "WYJEBALOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO" << std::endl;
-        usleep(10000000);
+        std::cout << "Po OTWORZYŁO SZMATE" << std::endl;
         int licznik = 1;                        // zmienna pomagająca poprawnie dodać dane do wiechrzołków
         
         for(int j = 0; j < 4; ++j){
