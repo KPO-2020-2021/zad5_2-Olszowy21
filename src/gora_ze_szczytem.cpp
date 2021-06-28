@@ -48,11 +48,9 @@ void Mount1::inicjuj_Mount1(std::string Filename_oryginal){
 
     std::ifstream oryginal;
 
-    oryginal.open(Filename_oryginal.c_str(), std::ios::in );
-    std::cout << "Przed OTWORZYŁO SZMATE" << std::endl;
+    oryginal.open(Filename_oryginal, std::ios::in );
 
     if(oryginal.is_open()){
-        std::cout << "Po OTWORZYŁO SZMATE" << std::endl;
         int licznik = 1;                        // zmienna pomagająca poprawnie dodać dane do wiechrzołków
         
         for(int j = 0; j < 4; ++j){

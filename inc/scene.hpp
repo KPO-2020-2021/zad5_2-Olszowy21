@@ -1,13 +1,15 @@
 #pragma once
 
 #include "drone.hpp"
+#include <list>
+#include <memory>
 
 class Scene{
 protected:
 
-    std::vector<Drone> Pudlo_z_dronami;
+    std::vector<Drone> Pudlo_z_dronami; 
 
-    std::list<objects_scene> Pudlo_z_obstrukcjami;
+    std::list<std::shared_ptr<objects_scene>> Pudlo_z_obstrukcjami;
 
     PzG::LaczeDoGNUPlota Lacze;
 
@@ -23,9 +25,7 @@ public:
 
     void Dodaj_obstrukcje(std::string *File_oryginal, Vector3D &skala, Vector3D &polozenie, int index, PzG::LaczeDoGNUPlota &Lacze);
 
-    void Usun_obstrukt(int index, PzG::LaczeDoGNUPlota &Lacze);
-
-    std::list<objects_scene> get_liste() { return Pudlo_z_obstrukcjami;};
+    bool Usun_obstrukt(PzG::LaczeDoGNUPlota &Lacze);
 
     void avtive_drone(int index);
 

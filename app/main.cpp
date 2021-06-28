@@ -273,14 +273,12 @@ int main() {
     }
           break;
     case 'u':{
-          int numer = 1;
-          std::cout<<"Wybierz element powierzchni do usuniecia:"<<std::endl;
 
-          for(std::list<objects_scene>::iterator iter = Scena.get_liste().begin(); iter != Scena.get_liste().end(); ++iter){
-            
-            std::cout <<"\t" << numer <<" - Polozenie (x,y): " << iter->get_pozycje_x() << " " << iter->get_pozycje_y() << "\tTyp: " << iter->zwroc_typ_obiektu() << std::endl;
-            usleep(10000000);
-            ++numer;
+          if(Scena.Usun_obstrukt(Lacze)){
+            std::cout<<"\t Element zostal usuniety."<<std::endl;
+          }
+          else{
+            std::cout<<"\t error coś z funkcją usun_obstrukt"<<std::endl;
           }
     }
           break;
@@ -296,5 +294,5 @@ int main() {
     }
   }
   while(wybor != 'k');
-  exit(0);
+  
 }
